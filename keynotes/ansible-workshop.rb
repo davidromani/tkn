@@ -185,13 +185,11 @@ block <<-EOS
 │ \e[43m   theory   \e[0m > \e[33;1mplaybooks\e[0m > example │
 └────────────────────────────────────┘
 
-
 ---
 - name: Create daily MySQL backups
   hosts: s6
   vars:
     - excluded_dbs:
-      - "Database"
       - "sys"
       - "information_schema"
       - "performance_schema"
