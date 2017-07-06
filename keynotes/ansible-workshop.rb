@@ -1,4 +1,30 @@
 center <<-EOS
+\e[30;1mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMNmhysooossydmMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMds:.             `-/ymMMMMMMMMMMMMMM
+MMMMMMMMMMMd+`                      .omMMMMMMMMMMM
+MMMMMMMMMy.                            /dMMMMMMMMM
+MMMMMMMh-               `.               /NMMMMMMM
+MMMMMMo                /MMy               `hMMMMMM
+MMMMM/                -NMMMo                yMMMMM
+MMMM+                .NMmsMM/                hMMMM
+MMMd                `dMN- hMN-               .MMMM
+MMM:                yMM/  `mMN`               yMMM
+MMM`               oMMy    .NMd`              +MMM
+MMM               /MMMMh/   /MMy              /MMM
+MMM`             -NMm-oNMNs. oMMo             +MMM
+MMM/            `mMN-   :hMMd/hMM/            hMMM
+MMMm           `dMM/      .oNMMMMN-          -MMMM
+MMMMs          yMMs          /hMMMm`        `mMMMM
+MMMMM+        :ddy             .sdh.       `hMMMMM
+MMMMMMy`                                  -mMMMMMM
+MMMMMMMm:                               `oMMMMMMMM
+MMMMMMMMMd:                           `oNMMMMMMMMM
+MMMMMMMMMMMNs-                     `/yMMMMMMMMMMMM
+MMMMMMMMMMMMMMNho:.            ./sdMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMNmdhyyyhhdNMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\e[0m
+
 \e[32;1m █████╗ ███╗   ██╗███████╗██╗██████╗ ██╗     ███████╗    ██╗    ██╗ ██████╗ ██████╗ ██╗  ██╗███████╗██╗  ██╗ ██████╗ ██████╗ 
 ██╔══██╗████╗  ██║██╔════╝██║██╔══██╗██║     ██╔════╝    ██║    ██║██╔═══██╗██╔══██╗██║ ██╔╝██╔════╝██║  ██║██╔═══██╗██╔══██╗
 ███████║██╔██╗ ██║███████╗██║██████╔╝██║     █████╗      ██║ █╗ ██║██║   ██║██████╔╝█████╔╝ ███████╗███████║██║   ██║██████╔╝
@@ -295,10 +321,13 @@ $ ansible localhost -a "/bin/echo hello world"
 $ ansible -i hosts all -m ping
 EOS
 
-center <<-EOS
+block <<-EOS
 ┌─────────────────────────────────┐
 │ \e[42m   practice   \e[0m > \e[32;1mrun a playbook\e[0m │
 └─────────────────────────────────┘
+
+
+$ ansible-playbook -i <PATH_TO_INVENTORY> app/ansible/deploy.yml
 
 
 
@@ -315,6 +344,21 @@ center <<-EOS
 
 
 \e[33;1mhttps://galaxy.ansible.com\e[0m
+EOS
+
+center <<-EOS
+╔╦╗╦ ╦╔═╗╔╗╔╦╔═  ╦ ╦╔═╗╦ ╦                      
+ ║ ╠═╣╠═╣║║║╠╩╗  ╚╦╝║ ║║ ║                      
+ ╩ ╩ ╩╩ ╩╝╚╝╩ ╩   ╩ ╚═╝╚═╝                      
+                                                
+                                                
+                                                
+┌─┐┬┌┬┐┬ ┬┬ ┬┌┐   ┌─┐┌┐┌┌┬┐  ┌┬┐┬ ┬┬┌┬┐┌┬┐┌─┐┬─┐
+│ ┬│ │ ├─┤│ │├┴┐  ├─┤│││ ││   │ ││││ │  │ ├┤ ├┬┘
+└─┘┴ ┴ ┴ ┴└─┘└─┘  ┴ ┴┘└┘─┴┘   ┴ └┴┘┴ ┴  ┴ └─┘┴└─
+┌─┐  ┌┬┐┌─┐┬  ┬┬┌┬┐┬─┐┌─┐┌┬┐┌─┐┌┐┌┬             
+│└┘   ││├─┤└┐┌┘│ ││├┬┘│ ││││├─┤││││             
+└──  ─┴┘┴ ┴ └┘ ┴─┴┘┴└─└─┘┴ ┴┴ ┴┘└┘┴             
 EOS
 
 __END__
